@@ -25,6 +25,7 @@ INSTALLED_APPS = [
     "core",
     "recruitment",
     "analytics",
+    "agentic",
 ]
 
 MIDDLEWARE = [

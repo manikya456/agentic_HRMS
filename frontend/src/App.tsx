@@ -14,6 +14,7 @@ import VoiceInterviewPage from "@/pages/VoiceInterview";
 import AnalyticsPage from "@/pages/Analytics";
 import SettingsPage from "@/pages/Settings";
 import ProfilePage from "@/pages/Profile";
+import AgenticHubPage from "@/pages/AgenticHub";
 import { ProtectedRoute } from "@/components/ProtectedRoute";
 import { AppShell } from "@/components/layout/AppShell";
 
@@ -129,6 +130,16 @@ export default function App() {
           <ProtectedRoute>
             <AppShell>
               <AnalyticsPage />
+            </AppShell>
+          </ProtectedRoute>
+        }
+      />
+      <Route
+        path="/agentic"
+        element={
+          <ProtectedRoute roles={["ADMIN", "SENIOR_MANAGER", "HR_RECRUITER"]}>
+            <AppShell>
+              <AgenticHubPage />
             </AppShell>
           </ProtectedRoute>
         }
